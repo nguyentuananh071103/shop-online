@@ -7,7 +7,7 @@ create table `categories`
 (
     id int primary key autoincrement,
     name varchar(50)
-)
+);
 
 create table `products`
 (
@@ -15,7 +15,7 @@ create table `products`
     name varchar(50),
     price varchar(50),
     description text
-)
+);
 
 create table `category_product`(
     id int primary key auto_increment,
@@ -23,7 +23,7 @@ create table `category_product`(
     product_id int,
     foreign key (category_id) references categories(id),
     foreign key (product_id) references products(id),
-)
+);
 
 insert into `products` (`name`, `price`, `description`) values
 ("Nike","200000","giay de hoi cao, gia hoi re"),
